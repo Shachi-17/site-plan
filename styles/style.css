@@ -24,12 +24,14 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
     margin-right: 10px;
+
 }
 
 nav ul {
@@ -78,23 +80,61 @@ p {
     line-height: 1.6;
 }
 
-.about {
+.about 
+{
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff3366; /* or any other color you prefer */
+    background-color: #a43312; /* or any other color you prefer */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
 }
-
+.about:hover
+{
+    transform: translateY(-15px);
+}
+.plan
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e7c24f; /* or any other color you prefer */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;  
+    cursor: pointer;
+    transition: 0.5s;
+}
+.plan:hover
+{
+    transform: translateY(-15px); 
+}
+.port
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #396e94; /* or any other color you prefer */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;   
+    cursor: pointer;
+    transition: 0.5s;
+}
+.port:hover
+{
+    transform: translateY(-15px); 
+}
 .image-box img {
-    max-width: 100%;
+    max-width: 95%;
     height: auto;
     border-radius: 5px;
 }
 
-/* Footer styles */
+
 footer {
     background-color: #333;
     color: #fff;
