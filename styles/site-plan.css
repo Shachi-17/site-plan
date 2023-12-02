@@ -27,7 +27,6 @@ Fonts are separated by a | */
 }
 
 
-/*  Look around below...but DON'T CHANGE ANYTHING! */
 
 body {
   max-width: 1200px;
@@ -128,31 +127,39 @@ nav a:hover {
 .sitemap {
   display: grid;
   justify-content: center;
-
   grid-template-columns: repeat(6, 15%);
   grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
+  grid-template-areas:
+    ". . home home . ."
     ". . . top . ."
     ". left left right right ."
     "page2 page2 . . page3 page3";
 }
+
 .sitemap > div {
-
   text-align: center;
-
 }
+
 .sm-home {
   grid-area: home;
   background-color: #ccc;
   line-height: 3em;
 }
+
 .sm-page2 {
   grid-area: page2;
   background-color: #ccc;
   line-height: 3em;
 }
+
 .sm-page3 {
   grid-area: page3;
+  background-color: #ccc;
+  line-height: 3em;
+}
+
+.sm-page4 {
+  grid-area: page4;
   background-color: #ccc;
   line-height: 3em;
 }
