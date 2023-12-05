@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Roboto+Condensed&display=swap');
+:root {
+    --heading-font: "Croissant One";
+    --paragraph-font: RobotoCondensed, Helvetica, sans-serif;
+}
+
+
+body {
+  background-color: #f5f5f5;
+  font-family: var(--heading-font);
+}
+
+.card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(to bottom, #72bff7, #396e94); 
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  color: #e74c3c;
+  font-size: 28px;
+  font-family: var(--heading-font);
+  margin-bottom: 10px;
+}
+
+button {
+  background: linear-gradient(to right, #3498db, #396e94); 
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px;
+  cursor: pointer;
+  width: 80%;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(to right, #396e94, #1c6390);
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #27ae60;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #219653;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  background: linear-gradient(to right, #1c6390, #396e94); 
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #555;
+}
+
+footer p, footer a {
+  margin: 10px 0;
+}
+
+
+footer a {
+  color: #e7c24f;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #f39c12;
+}

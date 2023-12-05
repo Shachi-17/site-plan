@@ -3,20 +3,20 @@
 --heading-font: "Croissant One";
 --paragraph-font: RobotoCondensed, Helvetica, sans-serif;
 }
-/* Reset some default styles */
+
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
-/* Global styles */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
     color: #333;
 }
 
-/* Header styles */
+
 header {
     background-color: #fff;
     padding: 20px;
@@ -56,7 +56,7 @@ nav a {
     font-size: 16px;
 }
 
-/* Main content styles */
+
 main {
     padding: 20px;
 }
@@ -80,7 +80,10 @@ h2 {
 }
 
 span {
-    color: #ff3366; /* or any other color you prefer */
+    background-clip: text;
+    -webkit-background-clip: text; 
+    color: transparent;
+    background-image: linear-gradient(to right, #a43312, #e7c24f, #396e94);
     font-family: var(--heading-font);
 }
 
@@ -93,7 +96,7 @@ p {
 {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #a43312; /* or any other color you prefer */
+    background-color: #a43312; 
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -109,7 +112,7 @@ p {
 {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #e7c24f; /* or any other color you prefer */
+    background-color: #e7c24f;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -125,7 +128,7 @@ p {
 {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #396e94; /* or any other color you prefer */
+    background-color: #396e94; 
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -145,7 +148,7 @@ p {
 
 
 footer {
-    background-color: #333;
+    background: linear-gradient(to right, #a43312, #e7c24f, #396e94); 
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -165,7 +168,57 @@ footer {
     border-radius: 50%;
 }
 
-/* Responsive styles */
+
+.feature-section {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.feature-section h2 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.feature-section p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.feature-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.feature-card h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.feature-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;

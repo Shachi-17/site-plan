@@ -136,47 +136,46 @@ nav a:hover {
     "page2 page2 . . page3 page3";
 }
 
-.sitemap > div {
+/* Add this CSS to your existing styles or your stylesheet */
+.sitemap-section {
   text-align: center;
 }
 
-.sm-home {
-  grid-area: home;
-  background-color: #ccc;
-  line-height: 3em;
+h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-.sm-page2 {
-  grid-area: page2;
-  background-color: #ccc;
-  line-height: 3em;
+.sitemap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
-.sm-page3 {
-  grid-area: page3;
-  background-color: #ccc;
-  line-height: 3em;
+.sitemap div {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.sm-page4 {
-  grid-area: page4;
-  background-color: #ccc;
-  line-height: 3em;
+.sitemap div:hover {
+  transform: scale(1.05);
 }
 
-.top {
-  grid-area: top;
-  border-left: 1px solid;
+.sitemap a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
 }
 
-.left {
-  grid-area: left;
-  border-top: 1px solid;
-  border-left: 1px solid;
-}
-
+.top,
+.left,
 .right {
-  grid-area: right;
-  border-top: 1px solid;
-  border-right: 1px solid;
+  background-color: #f9f9f9;
+  height: 10px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
 }
