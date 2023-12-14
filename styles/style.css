@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Roboto+Condensed&display=swap');
+
 :root {
---heading-font: "Croissant One";
---paragraph-font: RobotoCondensed, Helvetica, sans-serif;
+    --heading-font: "Croissant One", sans-serif;
+    --paragraph-font: "Roboto Condensed", Helvetica, sans-serif;
+    --primary-color: #333;
+    --accent-color-1: #a43312;
+    --accent-color-2: #e7c24f;
+    --accent-color-3: #396e94;
 }
 
 body, h1, h2, p, ul, li {
@@ -9,11 +14,10 @@ body, h1, h2, p, ul, li {
     padding: 0;
 }
 
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
-    color: #333;
+    color: var(--primary-color);
 }
 
 
@@ -23,7 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     font-family: var(--heading-font);
 }
 
@@ -37,7 +41,6 @@ header {
     width: 100px;
     height: 100px;
     margin-right: 10px;
-
 }
 
 nav ul {
@@ -51,14 +54,20 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 16px;
+}
+nav a:hover {
+    color: #aabd8c;
 }
 
 
 main {
     padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .hero-section {
@@ -76,14 +85,14 @@ h2 {
     font-size: 36px;
     margin-bottom: 10px;
     font-family: var(--paragraph-font);
-   
+    color: var(--accent-color-1);
 }
 
 span {
     background-clip: text;
-    -webkit-background-clip: text; 
+    -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(to right, #a43312, #e7c24f, #396e94);
+    background-image: linear-gradient(to right, var(--accent-color-1), var(--accent-color-2), var(--accent-color-3));
     font-family: var(--heading-font);
 }
 
@@ -92,54 +101,36 @@ p {
     line-height: 1.6;
 }
 
-.about 
-{
+
+.about, .plan, .port {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #a43312; 
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+    padding: 15px 30px;
+    border-radius: 10px;
     margin-top: 20px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.about:hover
-{
-    transform: translateY(-15px);
-}
-.plan
-{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #e7c24f;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;  
     cursor: pointer;
     transition: 0.5s;
 }
-.plan:hover
-{
-    transform: translateY(-15px); 
+
+.about {
+    background-color: var(--accent-color-1);
 }
-.port
-{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #396e94; 
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;   
-    cursor: pointer;
-    transition: 0.5s;
+
+.plan {
+    background-color: var(--accent-color-2);
 }
-.port:hover
-{
-    transform: translateY(-15px); 
+
+.port {
+    background-color: var(--accent-color-3);
 }
+
+.about:hover, .plan:hover, .port:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
 .image-box img {
     max-width: 95%;
     height: auto;
@@ -148,76 +139,32 @@ p {
 
 
 footer {
-    background: linear-gradient(to right, #a43312, #e7c24f, #396e94); 
+    background: linear-gradient(to right, var(--accent-color-1), var(--accent-color-2), var(--accent-color-3));
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
+
 .social {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .social a {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .social img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-}
-
-
-.feature-section {
-    background-color: #f9f9f9;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.feature-section h2 {
-    color: #333;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.feature-section p {
-    color: #666;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.feature-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
     transition: transform 0.3s ease-in-out;
 }
 
-.feature-card:hover {
-    transform: scale(1.05);
+.social img:hover {
+    transform: scale(1.2);
 }
 
-.feature-card h3 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.feature-card p {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.feature-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
 
 @media screen and (max-width: 768px) {
     header {
@@ -245,7 +192,7 @@ footer {
         max-width: none;
     }
 
-    .about {
+    .about, .plan, .port {
         margin-top: 10px;
     }
 }
